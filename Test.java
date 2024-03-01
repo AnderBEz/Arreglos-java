@@ -53,19 +53,12 @@ abstract class Arreglos {
         this.tamano = tamano;
         this.i = i;
     }
-    
     public void agregarPrincipio(){
         if (i == tamano){
-            
+
         }
     }
-
-    
 }
-
-
-
-
 
 public class Test {
     
