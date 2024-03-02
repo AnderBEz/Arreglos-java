@@ -47,23 +47,40 @@ class Alumnos{
 abstract class Arreglos {
     private Alumnos[] alumnos;
     private int tamano;
-    private int i = 0;
+    private int add = 0;
 
-    public Arreglo(int tamano, int i,){
+    public Arreglo(int tamano, int add,){
         this.tamano = tamano;
-        this.i = i;
+        this.add = add;
     }
-    public void agregarPrincipio(){
-        if (i == tamano){
+    public void agregarAlPrincipio(Alumnos alumno){
+        if (add == tamano){
+            //hace una exepcion o crear un error personalizado
+            //se utiliza mucho en el try catch
+            //condicionales ternarias
+            throw new RuntimeException("Error: El arreglo esta lleno");
 
         }
+        for (int i = add; i > 0; i-- ){
+            alumnos[i] = alumnos[i -1];
+        }
+        alumnos[0] = alumno;
+        add ++;
+    }
+
+    public void agregarAlFinal(Alumnos alumno){
+        if (add == tamano){
+            throw new RuntimeException("Error: El arreglo esta lleno.");
+        }
+        alumnos[add] = alumno;
+        add++;
     }
 }
 
 public class Test {
     
 public static void main(String[] args) {
-    
+    //menu ciclado con dowhile tiene 11
 }
     
 }
